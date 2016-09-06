@@ -1,0 +1,53 @@
+/*** Dashboard ***/
+.index-php #wpbody-content {
+  display: none;
+}
+/*** User edit page ***/
+#profile-page h2,
+#profile-page h3,
+#profile-page .user-rich-editing-wrap,
+#profile-page .user-admin-color-wrap,
+#profile-page .user-comment-shortcuts-wrap,
+#profile-page .user-admin-bar-front-wrap,
+#profile-page .user-nickname-wrap,
+#profile-page .user-display-name-wrap,
+#profile-page .user-url-wrap,
+#profile-page .user-description-wrap,
+#profile-page .user-profile-picture,
+#profile-page .user-sessions-wrap {
+  display: none;
+}
+/*** All posts page ***/
+.edit-php .actions {
+  display: none;
+}
+.edit-php .actions.bulkactions {
+  display: block;
+}
+/*** Post edit page ***/
+.post-new-php #edit-slug-box,
+.post-php #edit-slug-box,
+.post-new-php #submitdiv #minor-publishing,
+.post-php #submitdiv #minor-publishing,
+.post-new-php #pageparentdiv p,
+.post-php #pageparentdiv p,
+.post-new-php #postimagediv,
+.post-php #postimagediv {
+  display: none;
+}
+.post-new-php form#post #wp-word-count,
+.post-php form#post #wp-word-count {
+  display: none;
+}
+.post-new-php form#post .mce-statusbar,
+.post-php form#post .mce-statusbar {
+  border: none;
+}
+.post-new-php form#post .mce-statusbar .mce-path,
+.post-php form#post .mce-statusbar .mce-path {
+  display: none;
+}
+/*** Footer ***/
+#wpfooter {
+  display: none;
+}

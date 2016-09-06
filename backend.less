@@ -1,0 +1,74 @@
+/*** Dashboard ***/
+// Hide the whole dashboard
+.index-php #wpbody-content {
+  display: none;
+}
+
+/*** User edit page ***/
+// Hide all the unused fields
+#profile-page {
+  // Section titles
+  h2,
+  h3,
+  // Fields
+  .user-rich-editing-wrap,
+  .user-admin-color-wrap,
+  .user-comment-shortcuts-wrap,
+  .user-admin-bar-front-wrap,
+  .user-nickname-wrap,
+  .user-display-name-wrap,
+  .user-url-wrap,
+  .user-description-wrap,
+  .user-profile-picture,
+  .user-sessions-wrap {
+    display: none;
+  }
+}
+
+/*** All posts page ***/
+// Hide Dates filter
+.edit-php {
+  .actions {
+    display: none;
+    &.bulkactions {
+      display: block;
+    }
+  }
+}
+
+/*** Post edit page ***/
+// Hide slug, unneeded meta boxes and unneeded text editor features
+.post-new-php,
+.post-php {
+  // Slug
+  #edit-slug-box,
+  // Publish meta box
+  #submitdiv #minor-publishing,
+  // Page Attributes meta box
+  #pageparentdiv p,
+  // Featured Image meta box
+  #postimagediv {
+    display: none;
+  }
+
+  // Text Editor
+  form#post {
+    // Word count
+    #wp-word-count {
+      display: none;
+    }
+    // HTML path (e.g. ul > li > a)
+    .mce-statusbar {
+      border: none;
+      .mce-path {
+        display: none;
+      }
+    }
+  }
+}
+
+/*** Footer ***/
+// Hide WordPress branding and version
+#wpfooter {
+  display: none;
+}
