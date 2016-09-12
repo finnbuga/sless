@@ -24,6 +24,12 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lfr' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+		<div class="top">
+			<?php if ( is_active_sidebar( 'sidebar-header' ) ) : ?>
+				<?php dynamic_sidebar( 'sidebar-header' ); ?>
+			<?php endif; ?>
+		</div><!-- .top -->
+
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>

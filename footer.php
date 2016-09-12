@@ -14,11 +14,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'lfr' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'lfr' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'lfr' ), 'lfr', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
+			<div class="sidebar-footer">
+				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+			</div>
+		<?php endif; ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
