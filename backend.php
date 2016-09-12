@@ -43,37 +43,25 @@ function lfr_add_backend_stylesheet() {
 
 /**
  * Cleanup the admin bar
- *
- * Remove menu items that are not needed.
- * Also rename the first menu item (site name) to the more suggestive Home or Backend
  */
 function lfr_cleanup_admin_bar( $wp_admin_bar ) {
-
-	$to_remove = array(
-		'wp-logo',
-		'new-content',
-		'dashboard',
-		'view-site',
-		'search',
-		'my-account'
-	);
-
 	$menu_items = $wp_admin_bar->get_nodes();
 
+	// Rename the Home menu item
+	$site_name = $menu_items['site-name'];
+	$site_name->title = is_admin() ? __( 'Home', 'lfr' ) : __( 'Backend', 'lfr' );
+
+	// Keep a copy of the Edit menu item
+	$edit = isset($menu_items['edit']) ? $menu_items['edit'] : null;
+
+	// Remove all menu items
 	foreach ( $menu_items as $key => $menu_item ) {
-		if ( in_array( $key, $to_remove ) ) {
-			$wp_admin_bar->remove_node( $key );
-		} else {
-			// The only way to edit a node is by removing it, editing it and adding it back
-			$wp_admin_bar->remove_node( $key );
-			if ( $key == 'site-name' ) {
-				$menu_item->title = is_admin() ? 'Home' : 'Backend';
-			}
-			$wp_admin_bar->add_node( $menu_item );
-		}
-
-
+		$wp_admin_bar->remove_node( $key );
 	}
+
+	// Add the Home and the Edit menu items back
+	$wp_admin_bar->add_node( $site_name );
+	$wp_admin_bar->add_node( $edit );
 }
 
 /**
