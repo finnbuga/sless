@@ -25,6 +25,13 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="top">
+			<?php if ( is_user_logged_in( ) ) : ?>
+				<ul class="user-links">
+					<li><a href="<?php echo get_edit_user_link(); ?>">My profile</a></li>
+					<li><a href="<?php echo wp_logout_url(); ?>">Logout</a></li>
+				</ul>
+			<?php endif; ?>
+
 			<?php if ( is_active_sidebar( 'sidebar-header' ) ) : ?>
 				<?php dynamic_sidebar( 'sidebar-header' ); ?>
 			<?php endif; ?>
