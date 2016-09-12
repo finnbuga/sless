@@ -143,3 +143,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load backend customisations
  */
 require get_template_directory() . '/backend.php';
+
+/**
+ * Load frontend customisations
+ */
+require get_template_directory() . '/frontend.php';

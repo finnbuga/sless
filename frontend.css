@@ -1,0 +1,257 @@
+/*** Functions ***/
+/*** General Styling ***/
+body {
+  font-family: AtlasGrotesk, sans-serif;
+  color: #444;
+}
+a {
+  text-decoration: none;
+  color: #007af6;
+}
+a:visited {
+  color: #007af6;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 2px 2px 2px 9px;
+}
+/*** Structure ***/
+#masthead,
+#content,
+.sidebar-footer {
+  max-width: 1160px !important;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (min-width: 800px) {
+  #primary {
+    width: 70%;
+    float: left;
+    padding-right: 20px;
+  }
+  #secondary {
+    width: 30%;
+    float: left;
+    margin-top: 47px;
+    background: #f8f8f8;
+    border: 1px solid #d9d9d9;
+    padding: 0 20px;
+  }
+}
+/*** Logo ***/
+.site-title a {
+  text-decoration: none;
+  color: #2e65ff;
+  font-size: 30px;
+  font-weight: bold;
+}
+/*** User login ***/
+.top {
+  float: right;
+  margin: 20px 0;
+  font-size: 14px;
+}
+.top ul.user-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.top ul.user-links li {
+  display: inline-block;
+  padding: 0 8px;
+}
+.top ul.user-links li:first-child {
+  margin-left: -8px;
+}
+.top ul.user-links li:last-child {
+  margin-right: -8px;
+}
+.top .widget_theme_my_login {
+  margin: 5px 0 0;
+}
+.top .widget_theme_my_login .tml {
+  max-width: none;
+  text-align: right;
+}
+.top .widget_theme_my_login .tml-user-login-wrap,
+.top .widget_theme_my_login .tml-user-pass-wrap {
+  display: inline-block;
+  max-width: 140px;
+  margin: 0;
+}
+.top .widget_theme_my_login .tml-user-login-wrap label,
+.top .widget_theme_my_login .tml-user-pass-wrap label {
+  display: none;
+}
+.top .widget_theme_my_login .tml-user-login-wrap input,
+.top .widget_theme_my_login .tml-user-pass-wrap input {
+  margin: 0;
+}
+.top .widget_theme_my_login .tml-rememberme-submit-wrap {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+}
+.top .widget_theme_my_login .tml-rememberme-submit-wrap .tml-rememberme-wrap {
+  display: none;
+}
+.top .widget_theme_my_login .tml-rememberme-submit-wrap .tml-submit-wrap {
+  display: block;
+  margin: 0;
+}
+.top .widget_theme_my_login .tml-user-login-wrap:before,
+.top .widget_theme_my_login .tml-user-pass-wrap:before {
+  font-family: dashicons;
+  font-size: 23px;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.top .widget_theme_my_login .tml-user-login-wrap input,
+.top .widget_theme_my_login .tml-user-pass-wrap input {
+  width: 110px;
+}
+.top .widget_theme_my_login .tml-user-login-wrap:before {
+  content: "\f110";
+}
+.top .widget_theme_my_login .tml-user-pass-wrap:before {
+  content: "\f160";
+}
+/*** Menu ***/
+#site-navigation ul#primary-menu {
+  margin: 0 -10px;
+}
+#site-navigation ul#primary-menu > li {
+  padding: 10px;
+}
+#site-navigation ul.sub-menu {
+  margin: 10px -15px 0;
+  padding: 8px 0 10px;
+}
+#site-navigation ul.sub-menu > li {
+  padding: .18em 18px;
+}
+#site-navigation ul.sub-menu > li:first-child {
+  padding-top: 0;
+}
+#site-navigation a {
+  font-size: 17px;
+  font-weight: 500;
+  color: #222;
+}
+#site-navigation .current-menu-item > a,
+#site-navigation a:hover {
+  color: #007af6;
+}
+#site-navigation ul.sub-menu {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+#site-navigation ul.sub-menu a:visited {
+  color: #144577;
+}
+/*** Secondary section: Widgets ***/
+#secondary {
+  margin-bottom: 1rem;
+}
+#secondary .widget-title {
+  color: #007af6;
+}
+/*** Guides Hierarchical Menu widget ***/
+.widget_guides_menu_widget ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.widget_guides_menu_widget ul ul {
+  padding-left: 1em;
+}
+.widget_guides_menu_widget .menu a {
+  text-decoration: none;
+  color: #777;
+}
+.widget_guides_menu_widget .menu a:visited {
+  color: #53789d;
+}
+.widget_guides_menu_widget .menu a:hover {
+  color: #007af6;
+}
+.widget_guides_menu_widget .menu > ul > li > a,
+.widget_guides_menu_widget .menu > ul > li > ul > li > a {
+  color: #5e5e5e;
+}
+.widget_guides_menu_widget .menu {
+  padding-left: 10px;
+}
+.widget_guides_menu_widget .menu > ul > li > a:before,
+.widget_guides_menu_widget .menu > ul > li > ul > li > a:before {
+  content: "\f139";
+  font-family: dashicons;
+  vertical-align: middle;
+  line-height: 13px;
+  margin-left: -16px;
+}
+/*** Primary section ***/
+#primary {
+  min-height: 300px;
+}
+.entry-title {
+  margin: 15px 0 0;
+}
+.entry-content,
+.entry-summary {
+  margin: 10px 0 0;
+}
+.entry-title {
+  font-size: 43px;
+  font-weight: 100;
+}
+#breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+#breadcrumb li {
+  display: inline-block;
+  padding: 0 0;
+}
+#breadcrumb li:first-child {
+  margin-left: 0;
+}
+#breadcrumb li:last-child {
+  margin-right: 0;
+}
+#breadcrumb li:before {
+  content: '>';
+  margin: 0 .5em;
+}
+#breadcrumb li:first-child:before {
+  content: '';
+  margin: 0;
+}
+.entry-footer {
+  color: #777;
+}
+/*** Guides Page ***/
+.entry-footer .edit-link {
+  display: none;
+}
+.post-navigation {
+  display: none;
+}
+/*** Footer ***/
+#colophon {
+  padding-top: 1em;
+  background-color: #fafafa;
+  color: gray;
+  font-size: 14px;
+  font-weight: 300;
+}
+#colophon a {
+  color: black;
+}
