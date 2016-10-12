@@ -99,6 +99,8 @@ function lfr_cleanup_admin_menu() {
 	remove_menu_page( 'index.php' );
 	// Posts
 	remove_menu_page( 'edit.php' );
+	// Pages
+	remove_menu_page( 'edit.php?post_type=page' );
 	// Media
 	remove_menu_page( 'upload.php' );
 	// Tools
