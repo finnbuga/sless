@@ -174,15 +174,15 @@ input[type="password"] {
   text-decoration: none;
   color: #777;
 }
-.widget_guides_menu_widget .menu a:visited {
-  color: #53789d;
-}
 .widget_guides_menu_widget .menu a:hover {
   color: #007af6;
 }
 .widget_guides_menu_widget .menu > ul > li > a,
 .widget_guides_menu_widget .menu > ul > li > ul > li > a {
   color: #5e5e5e;
+}
+.widget_guides_menu_widget .menu .current {
+  color: black;
 }
 .widget_guides_menu_widget .menu {
   padding-left: 10px;

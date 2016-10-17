@@ -217,16 +217,20 @@ input[type="password"] {
     a {
       text-decoration: none;
       color: @secondary-gray;
-      &:visited {
-        color: mix(@secondary-gray, @primary-color, 70%);
-      }
       &:hover {
         color: @primary-color;
       }
     }
+
+    // Fade colour for lower rank links
     > ul > li > a,
     > ul > li > ul > li > a {
       color: darken(@secondary-gray, 10%);
+    }
+
+    // Emphasise the current link
+    .current {
+      color: black;
     }
   }
 
