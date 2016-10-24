@@ -25,12 +25,14 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="top">
-			<?php if ( is_user_logged_in( ) ) : ?>
-				<ul class="user-links">
-					<li><a href="<?php echo get_edit_user_link(); ?>">My profile</a></li>
+			<ul class="user-links">
+				<?php if ( is_user_logged_in( ) ) : ?>
+					<li>Hi <?php echo wp_get_current_user()->display_name; ?></li>
 					<li><a href="<?php echo wp_logout_url(); ?>">Logout</a></li>
-				</ul>
-			<?php endif; ?>
+				<?php else: ?>
+					<li><a href="<?php echo wp_login_url('/'); ?>">Login</a></li>
+				<?php endif; ?>
+			</ul>
 
 			<?php if ( is_active_sidebar( 'sidebar-header' ) ) : ?>
 				<?php dynamic_sidebar( 'sidebar-header' ); ?>
