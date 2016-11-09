@@ -43,3 +43,14 @@ function lfr_print_breadcrumb( $post = null ) {
 	echo '<li>' . get_the_title() . '</li>';
 	echo '</div>';
 }
+
+/**
+ * Remove "Int-" from the Widget titles
+ *
+ * "Int-" is used to mark International guides that have the old hierarchy structure. E.g. Int-USA, Int-Canada.
+ * This should not be displayed on the front end.
+ */
+add_filter( 'widget_title', 'lfr_hide_int' );
+function lfr_hide_int( $widget_title ) {
+	return substr( $widget_title, 0, 4 ) === 'Int-' ? substr( $widget_title, 4 ) : $widget_title;
+}
