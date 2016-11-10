@@ -2,20 +2,31 @@
 /*** General Styling ***/
 body {
   font-family: AtlasGrotesk, sans-serif;
-  color: #444;
+  color: #737373;
+  font-weight: 300;
+  font-size: 19px;
+}
+p {
+  line-height: 28px;
 }
 a {
   text-decoration: none;
-  color: #007af6;
+  font-weight: 500;
+  color: #737373;
 }
-a:visited {
-  color: #007af6;
+a:visited,
+a:hover {
+  color: #737373;
+}
+a:hover {
+  border-bottom: 1px solid #D0D0D0;
 }
 h1,
 h2,
 h3,
 h4 {
   font-weight: normal;
+  color: black;
 }
 input[type="text"],
 input[type="password"] {
@@ -40,8 +51,7 @@ input[type="password"] {
     float: left;
     margin-top: 47px;
     background: #f8f8f8;
-    border: 1px solid #d9d9d9;
-    padding: 0 20px;
+    padding: 0 30px;
   }
 }
 /*** Logo ***/
@@ -61,6 +71,7 @@ input[type="password"] {
   margin: 0;
   padding: 0;
   list-style: none;
+  color: #ADADAD;
 }
 .top ul.user-links li {
   display: inline-block;
@@ -71,6 +82,13 @@ input[type="password"] {
 }
 .top ul.user-links li:last-child {
   margin-right: -8px;
+}
+.top ul.user-links a {
+  color: #ADADAD;
+}
+.top ul.user-links a:hover {
+  color: #373737;
+  border-bottom: 1px solid #D0D0D0;
 }
 .top .widget_theme_my_login {
   margin: 5px 0 0;
@@ -124,10 +142,10 @@ input[type="password"] {
 }
 /*** Menu ***/
 #site-navigation ul#primary-menu {
-  margin: 0 -10px;
+  margin: 0 -25px;
 }
 #site-navigation ul#primary-menu > li {
-  padding: 10px;
+  padding: 10px 25px;
 }
 #site-navigation ul.sub-menu {
   margin: 10px -15px 0;
@@ -140,12 +158,15 @@ input[type="password"] {
   padding-top: 0;
 }
 #site-navigation a {
-  font-size: 17px;
-  font-weight: 500;
   color: #222;
+  font-size: 17px;
+  line-height: 20px;
+  border-bottom: 1px solid transparent;
 }
-#site-navigation .current-menu-item > a,
 #site-navigation a:hover {
+  border-bottom: 1px solid #D0D0D0;
+}
+#site-navigation .current-menu-item > a {
   color: #007af6;
 }
 #site-navigation ul.sub-menu {
@@ -159,7 +180,7 @@ input[type="password"] {
   margin-bottom: 1rem;
 }
 #secondary .widget-title {
-  color: #007af6;
+  font-weight: 100;
 }
 /*** Guides Hierarchical Menu widget ***/
 .widget_guides_menu_widget ul {
@@ -170,19 +191,21 @@ input[type="password"] {
 .widget_guides_menu_widget ul ul {
   padding-left: 1em;
 }
+.widget_guides_menu_widget .menu {
+  font-size: 16px;
+}
 .widget_guides_menu_widget .menu a {
   text-decoration: none;
   color: #777;
 }
-.widget_guides_menu_widget .menu a:hover {
-  color: #007af6;
+.widget_guides_menu_widget .menu > ul > li > a {
+  color: #2b2b2b;
 }
-.widget_guides_menu_widget .menu > ul > li > a,
 .widget_guides_menu_widget .menu > ul > li > ul > li > a {
-  color: #5e5e5e;
+  color: #515151;
 }
 .widget_guides_menu_widget .menu .current {
-  color: black;
+  color: #007af6;
 }
 .widget_guides_menu_widget .menu {
   padding-left: 10px;
@@ -193,14 +216,19 @@ input[type="password"] {
   font-family: dashicons;
   vertical-align: middle;
   line-height: 13px;
+  letter-spacing: -12px;
+  margin-right: 11px;
   margin-left: -16px;
+}
+.widget_guides_menu_widget .menu > ul > li > a:before {
+  content: "\f139\f139";
 }
 /*** Primary section ***/
 #primary {
   min-height: 300px;
 }
 .entry-title {
-  margin: 15px 0 0;
+  margin: 30px 0 0;
 }
 .entry-content,
 .entry-summary {
@@ -208,6 +236,7 @@ input[type="password"] {
 }
 .entry-title {
   font-size: 43px;
+  line-height: 1.2;
   font-weight: 100;
 }
 #breadcrumb {

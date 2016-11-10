@@ -1,5 +1,5 @@
 @primary-color: #007af6;
-@link-color: @primary-color;
+@link-color: #737373;
 @menu-color: #222;
 @main-gray: #444;
 @secondary-gray: #777;
@@ -32,19 +32,31 @@
 /*** General Styling ***/
 body {
   font-family: AtlasGrotesk, sans-serif;
-  color: @main-gray;
+  color: #737373;
+  font-weight: 300;
+  font-size: 19px;
+}
+
+p {
+  line-height: 28px;
 }
 
 a {
   text-decoration: none;
+  font-weight: 500;
   color: @link-color;
-  &:visited {
+  &:visited,
+  &:hover {
     color: @link-color;
+  }
+  &:hover {
+    border-bottom: 1px solid #D0D0D0;
   }
 }
 
 h1, h2, h3, h4 {
   font-weight: normal;
+  color: black;
 }
 
 input[type="text"],
@@ -75,8 +87,7 @@ input[type="password"] {
     float: left;
     margin-top: 47px;
     background: #f8f8f8;
-    border: 1px solid #d9d9d9;
-    padding: 0 20px;
+    padding: 0 30px;
   }
 }
 
@@ -97,6 +108,14 @@ input[type="password"] {
   // User links
   ul.user-links {
     .horizontal-menu(8px);
+    color: #ADADAD;
+    a {
+      color: #ADADAD;
+      &:hover {
+        color: #373737;
+        border-bottom: 1px solid #D0D0D0;
+      }
+    }
   }
 
   // Login form
@@ -160,9 +179,9 @@ input[type="password"] {
 #site-navigation {
   // Spacing
   ul#primary-menu {
-    margin: 0 -10px;
+    margin: 0 -25px;
     > li {
-      padding: 10px;
+      padding: 10px 25px;
     }
   }
   ul.sub-menu {
@@ -178,13 +197,17 @@ input[type="password"] {
 
   // Font & color
   a {
-    font-size: 17px;
-    font-weight: 500;
     color: @menu-color;
+
+    font-size: 17px;
+    line-height: 20px;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid #D0D0D0;
+    }
   }
-  .current-menu-item > a,
-  a:hover {
-    color: @link-color;
+  .current-menu-item > a {
+    color: @primary-color;
   }
   ul.sub-menu {
     a:visited {
@@ -197,7 +220,7 @@ input[type="password"] {
 /*** Secondary section: Widgets ***/
 #secondary {
   .widget-title {
-    color: @primary-color;
+    font-weight: 100;
   }
   margin-bottom: 1rem;
 }
@@ -214,23 +237,25 @@ input[type="password"] {
 
   // Link colours
   .menu {
+    font-size: 16px;
     a {
       text-decoration: none;
       color: @secondary-gray;
       &:hover {
-        color: @primary-color;
       }
     }
 
     // Fade colour for lower rank links
-    > ul > li > a,
+    > ul > li > a {
+      color: darken(@secondary-gray, 30%);
+    }
     > ul > li > ul > li > a {
-      color: darken(@secondary-gray, 10%);
+      color: darken(@secondary-gray, 15%);
     }
 
     // Emphasise the current link
     .current {
-      color: black;
+      color: @primary-color;
     }
   }
 
@@ -244,8 +269,13 @@ input[type="password"] {
         font-family: dashicons;
         vertical-align: middle;
         line-height: 13px;
+        letter-spacing: -12px;
+        margin-right: 11px;
         margin-left: -16px;
       }
+    }
+    > ul > li > a:before {
+      content: "\f139\f139";
     }
   }
 }
@@ -256,7 +286,7 @@ input[type="password"] {
   min-height: 300px;
 }
 .entry-title {
-  margin: 15px 0 0;
+  margin: 30px 0 0;
 }
 .entry-content,
 .entry-summary {
@@ -266,6 +296,7 @@ input[type="password"] {
 // Title styling
 .entry-title {
   font-size: 43px;
+  line-height: 1.2;
   font-weight: 100;
 }
 
