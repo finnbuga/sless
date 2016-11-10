@@ -67,6 +67,9 @@ function lfr_cleanup_admin_bar( $wp_admin_bar ) {
 	$site_name = $menu_items['site-name'];
 	$site_name->title = is_admin() ? __( 'Home', 'lfr' ) : __( 'Backend', 'lfr' );
 
+	// Keep a copy of the View menu item
+	$view = isset($menu_items['view']) ? $menu_items['view'] : null;
+
 	// Keep a copy of the Edit menu item
 	$edit = isset($menu_items['edit']) ? $menu_items['edit'] : null;
 
@@ -75,8 +78,9 @@ function lfr_cleanup_admin_bar( $wp_admin_bar ) {
 		$wp_admin_bar->remove_node( $key );
 	}
 
-	// Add the Home and the Edit menu items back
+	// Add the Home and the View / Edit menu items back
 	$wp_admin_bar->add_node( $site_name );
+	$wp_admin_bar->add_node( $view );
 	$wp_admin_bar->add_node( $edit );
 }
 
