@@ -30,8 +30,10 @@
 					<li>Hi <?php echo wp_get_current_user()->display_name; ?></li>
 					<li><a href="<?php echo wp_logout_url(); ?>">Logout</a></li>
 				<?php else: ?>
-					<li><a href="<?php echo wp_login_url('/'); ?>">Login</a></li>
+					<li><a href="<?php echo wp_login_url('/'); ?>">Sign in</a></li>
 				<?php endif; ?>
+					<li><a class="info-mailto" href="mailto:help@leatherheadfood.com">help@leatherheadfood.com</a></li>
+					<li><a class="info-tel uk" href="tel:+44 (0)1372 376761">+44 (0)1372 376761</a></li>
 			</ul>
 
 			<?php if ( is_active_sidebar( 'sidebar-header' ) ) : ?>
