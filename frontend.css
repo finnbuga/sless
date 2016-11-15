@@ -1,3 +1,17 @@
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(fonts/AtlasGrotesk-Regular.otf);
+}
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(fonts/AtlasGrotesk-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: AtlasGrotesk;
+  src: url(fonts/AtlasGrotesk-Light.otf);
+  font-weight: 300;
+}
 /*** Functions ***/
 /*** General Styling ***/
 body {
